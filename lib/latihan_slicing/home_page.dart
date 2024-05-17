@@ -33,13 +33,14 @@ class _PageHomeState extends State<PageHome> {
         context,
         MaterialPageRoute(builder: (context) => PageLearning()),
       );
-    } else if (index == 3) {
-      print('Navigating to PageSearch');
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => PageSearch()),
-      );
     }
+    // else if (index == 3) {
+    //   print('Navigating to PageSearch');
+    //   Navigator.push(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => PageSearch()),
+    //   );
+    // }
   }
 
   @override

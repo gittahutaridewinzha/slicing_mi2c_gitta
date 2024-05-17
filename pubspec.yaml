@@ -82,6 +82,7 @@ flutter:
   - gambar/cispp.png
   - gambar/ethica.png
   - gambar/intro.png
+  - gambar/review.png
   - gambar/
 
   # An image asset can refer to one or more resolution-specific "variants", see

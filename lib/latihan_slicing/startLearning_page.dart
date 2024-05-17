@@ -183,8 +183,77 @@ class _PageLearningState extends State<PageLearning> {
                   ],
                 ),
               ),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.only(left: 14.0), // Sesuaikan nilai padding sesuai kebutuhan
+                child: Text('Ratings and Reviews',
+                  style: TextStyle(
+                      fontSize: 20),
+                ),
+              ),
+
+              Row(
+        children: [
+        SizedBox(height: 120,),
+      Padding(
+        padding: const EdgeInsets.only(left: 14.0), // Sesuaikan nilai padding sesuai kebutuhan
+        child:
+        Text('3.4',
+          style: TextStyle(
+              fontSize: 30),
+        ),
+      ),
+      Column(
+        children: [
+          Row(
+            children: [
+              SizedBox(width: 30,),
+              Icon(Icons.star,
+                color: Colors.amber,),
+              Icon(Icons.star,
+                color: Colors.amber,),
+              Icon(Icons.star,
+                color: Colors.amber,),
+              Icon(Icons.star,
+                color: Colors.grey,),
+              Icon(Icons.star,
+                color: Colors.grey,),
             ],
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 14.0), // Sesuaikan nilai padding sesuai kebutuhan
+            child:
+            Text('3 views',
+              style: TextStyle(
+                  fontSize: 15),
+            ),
+          ),
+        ],
+      )
+        ],
+      ),
+            ],
+          ),
+          Center(
+            child: Card(
+              child: Container(
+                color: Colors.indigo,
+                width: 300,
+                height: 35,
+                child: Center(
+                  child: Text(
+                    'Start Learning',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
+
+
         ],
       ),
     );

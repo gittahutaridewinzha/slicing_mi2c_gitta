@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_mi2c/latihan_slicing/home_page.dart';
+import 'package:slicing_mi2c/latihan_slicing/startLearning_page.dart';
 
 class PageCourse extends StatefulWidget {
   const PageCourse({Key? key}) : super(key: key);
@@ -206,14 +207,21 @@ class _PageCourseState extends State<PageCourse> {
                                   color: Colors.black, // Warna garis
                                   width: double.infinity, // Lebar garis mengisi bagian yang tersisa dari baris
                                 ),
-                                SizedBox(height: 10), // Spasi antara garis dan teks
-                                Center(
-                                  child: Text(
-                                    'Start Learning', // Teks di tengah
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 24,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => PageLearning()), // Ganti PageLearning dengan halaman yang sesuai
+                                    );
+                                  },
+                                  child: Center(
+                                    child: Text(
+                                      'Start Learning', // Teks di tengah
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
