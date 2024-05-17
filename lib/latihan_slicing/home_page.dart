@@ -91,26 +91,42 @@ class _PageHomeState extends State<PageHome> {
 }
 
 
-  Widget _buildHeader(BuildContext context) {
-    return Container(
-      width: 45,
-      decoration: BoxDecoration(
-        color: Color(0xFFFFFF),
-        borderRadius: BorderRadius.circular(50),
+Widget _buildHeader(BuildContext context) {
+  return Container(
+    width: 100, // Sesuaikan lebar container sesuai kebutuhan
+    decoration: BoxDecoration(
+      color: Color(0xFFFFFF),
+      borderRadius: BorderRadius.circular(50),
+    ),
+    alignment: Alignment.centerLeft,
+    child: InkWell(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: Row(
+        children: [
+          Text(
+            'Halo ',
+            style: TextStyle(
+              fontSize: 19, // Sesuaikan ukuran teks sesuai kebutuhan
+              color: Colors.grey, // Misalnya, ubah warna teks menjadi hitam
+            ),
+          ),
+          Text(
+            'Gitta!',
+            style: TextStyle(
+              fontSize: 19, // Sesuaikan ukuran teks sesuai kebutuhan
+              color: Colors.grey, // Misalnya, ubah warna teks menjadi hitam
+            ),
+          ),
+        ],
       ),
-      alignment: Alignment.topLeft,
-      child: Center(
-        child: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back_ios),
-        ),
-      ),
-    );
-  }
+    ),
+  );
+}
 
-  Widget _buildContent(BuildContext context) {
+
+Widget _buildContent(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Center(
